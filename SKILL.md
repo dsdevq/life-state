@@ -23,6 +23,17 @@ triggers:
 
 A boring, durable state primitive. NOT a chat experience — it's the integration glue that lets other skills (`morning_brief`, future workout suggester, bedtime brief) adapt to your current state instead of returning the same template every day.
 
+## Setup
+
+This skill ships a SKILL.md manifest via ClawHub, but the `life-state` CLI binary lives on npm. Both layers are required.
+
+```bash
+openclaw skills install life-state    # installs this SKILL.md
+npm install -g life-state             # installs the CLI binary
+```
+
+Requires Node >= 20. Once both are installed, the CLI is on PATH and other skills can invoke it.
+
 ## When to invoke
 
 User describes how they feel, their energy level, soreness, or sleep quality. Examples:
